@@ -1,0 +1,26 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC+3
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: torrent-backend
+    depends_on: 
+      - transmission
+    volumes:
+      - ./downloads:/downloads
+    ports:
+      - 8000:8000
