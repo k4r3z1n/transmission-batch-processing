@@ -74,7 +74,5 @@ async def upload(
             "selected_files": len(wanted_ids)
         })
 
-    return RedirectResponse(
-    url="http://127.0.0.1:9091",
-    status_code=303
-)
+    url = request.url.replace(port=9091, path="/")._url
+    return RedirectResponse(url=url, status_code=303)
