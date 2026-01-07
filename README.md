@@ -9,4 +9,4 @@ docker compose build
 docker compose up
 ```
 
-Open 127.0.0.1:8000 in your browser. Follow the instructions. Downloaded files will be in *transmission-batch-processing/downloads* folder.
+Open http://127.0.0.1:8000 in your browser. Follow the instructions. Downloaded files will be in *transmission-batch-processing/downloads* folder.
