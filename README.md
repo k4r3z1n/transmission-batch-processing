@@ -1,7 +1,7 @@
 # transmission-batch-processing
 A rather specific tool for [Transmission](https://github.com/transmission/transmission) for downloading only files that contain specified strings in their names.
 
-###HOW-TO:
+### HOW-TO:
 ```
 git clone https://github.com/k4r3z1n/transmission-batch-processing
 cd ./transmission-batch-processing
